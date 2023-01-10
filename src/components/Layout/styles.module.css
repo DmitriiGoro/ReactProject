@@ -1,0 +1,16 @@
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  background-color: var(--page-background-color);
+  position: relative;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.button {
+  max-width: 300px;
+}

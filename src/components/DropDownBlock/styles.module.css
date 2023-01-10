@@ -1,0 +1,15 @@
+.dropdown__block {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid grey;
+  padding: 8px 12px;
+  background-color: var(--dropdown-content-color);
+  z-index: 10;
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown__block:active {
+  background-color: var(--dropdown-block-active-color);
+}

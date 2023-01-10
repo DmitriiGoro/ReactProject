@@ -1,13 +1,35 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+:root {
+  --page-background-color: #eee;
+  --card-background-color: white;
+  --card-shadow-color: #646378;
+  --tools-icon-fill: #000;
+  --tools-icon-fill-onHover: rgb(102, 102, 247);
+  --copy-button-active-color: rgb(236, 138, 52);
+  --tooltip-font-color: whitesmoke;
+  --dropdown-content-color: white;
+  --dropdown-block-active-color: rgba(232, 127, 41, 0.7);
+  --button-font-color: #eee;
+  --button-background-color: #ff6f32;
+  --airline-input-border-color: #ff6f32;
+  --flight-input-border-color: #0c73fe;
+  --flight-button-background-color: #0c73fe;
+  --flight-input-border-focus-color: #ff6f32;
+}
+
+* {
+  box-sizing: border-box;
 }

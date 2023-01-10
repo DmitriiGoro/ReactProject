@@ -1,0 +1,90 @@
+.root {
+  position: relative;
+  margin: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.root button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  height: auto;
+}
+
+.root__main {
+  display: flex;
+}
+
+.radios-block {
+  display: flex;
+  align-items: center;
+}
+
+.radios-block__field {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 5px;
+  font-size: 10px;
+  text-align: left;
+  gap: 3px;
+}
+
+.form {
+  margin: 20px 0;
+}
+
+.radios-block__radio-name {
+  display: contents;
+  text-transform: capitalize;
+}
+
+.radios-block__radio-iata {
+  display: contents;
+  text-transform: uppercase;
+}
+
+.radios-block__iata {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.root__title {
+  margin: 0;
+}
+
+.input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1.5px rgb(11, 11, 29) solid;
+  outline: none;
+  border-color: var(--airline-input-border-color);
+}
+
+.loader-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 4px solid;
+  border-color: #ffffff transparent #ffffff transparent;
+  border-radius: 50%;
+  animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

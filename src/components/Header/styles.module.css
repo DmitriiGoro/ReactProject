@@ -1,0 +1,28 @@
+.header {
+  font-size: 20px;
+  background-color: rgb(75, 71, 71);
+  padding: 20px;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.header__link-container {
+  display: flex;
+  gap: 20px;
+}
+
+.header__link {
+  text-decoration: none;
+  color: rgb(139, 136, 136);
+  transition: transform 300ms linear;
+}
+
+.header__active-link {
+  color: white;
+  transform: scale(120%);
+  text-decoration: none;
+}

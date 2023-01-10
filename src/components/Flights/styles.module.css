@@ -1,0 +1,46 @@
+.root {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.root input {
+  border-color: var(--flight-input-border-color);
+  transition: border-color 200ms linear;
+}
+
+.root input:focus {
+  border-color: var(--flight-input-border-focus-color);
+}
+
+.root button {
+  height: auto;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  background-color: var(--flight-button-background-color);
+}
+
+.flight-block {
+  margin: 20px;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  margin-right: 20px;
+  align-self: center;
+}
+
+.wrapper {
+  display: flex;
+  gap: 1px;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.input_error {
+  border: 1.5px #f03d3e solid;
+}

@@ -1,0 +1,16 @@
+.error-inform {
+  border: 1px solid grey;
+  padding: 20px 40px;
+  border-radius: 6px;
+  background-color: var(--card-background-color);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 30px auto;
+  width: fit-content;
+}
+
+.error-inform__title {
+  margin: 10px 0;
+}

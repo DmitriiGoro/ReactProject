@@ -1,0 +1,26 @@
+.root {
+  position: relative;
+}
+
+.calendar__logo {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1.5px rgb(11, 11, 29) solid;
+  outline: none;
+  cursor: pointer;
+}
+
+input:focus {
+  border: 1.5px rgb(28, 126, 201) solid;
+  outline: none;
+}

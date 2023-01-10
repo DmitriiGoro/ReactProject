@@ -1,0 +1,11 @@
+.calendar {
+  border: 2px black solid;
+  border-radius: 2px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 220px;
+  width: 50%;
+  margin-top: 1px;
+  z-index: 10;
+}

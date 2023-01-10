@@ -1,0 +1,40 @@
+.root {
+  position: relative;
+}
+
+.input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1.5px rgb(11, 11, 29) solid;
+  outline: none;
+}
+
+input:focus {
+  border: 1.5px rgb(28, 126, 201) solid;
+  outline: none;
+}
+
+.dropdown {
+  position: relative;
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+}
+
+.dropdown__content {
+  position: absolute;
+  min-width: 160px;
+  width: inherit;
+}
+
+.input:focus + .dropdown {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown:active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}

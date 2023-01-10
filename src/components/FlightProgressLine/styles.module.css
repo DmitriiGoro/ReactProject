@@ -1,0 +1,89 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1px;
+  flex: 1 0 auto;
+  position: relative;
+  align-items: center;
+}
+
+.root__departure {
+  margin-right: 10px;
+}
+
+.root__arrival {
+  padding: 0 10px;
+}
+
+.root__container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1px;
+  flex: 0.8 0 auto;
+  position: relative;
+  align-items: center;
+}
+
+.progress-line {
+  box-sizing: content-box;
+  background-clip: content-box;
+  background-color: rgba(128, 128, 128, 0.5);
+  height: 5px;
+  position: relative;
+  color: blue;
+  flex-basis: 11px;
+  border-radius: 2.5px;
+  cursor: pointer;
+}
+
+.progress-line_transfer {
+  height: 1px;
+}
+
+.progress-line:first-child {
+  margin-left: 5px;
+}
+
+.progress-line__tooltip {
+  position: absolute;
+  font-size: 0.625rem;
+  bottom: 100%;
+  margin-bottom: 5px;
+  background-color: var(--card-shadow-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  min-width: 100px;
+  opacity: 0;
+  color: var(--tooltip-font-color);
+  visibility: hidden;
+  text-align: center;
+  transition: transform 250ms linear, opacity 200ms linear,
+    visibility 200ms linear;
+}
+
+.progress-line:hover .progress-line__tooltip,
+.progress-line_transfer:hover .progress-line__tooltip {
+  flex-direction: column;
+  opacity: 0.9;
+  visibility: visible;
+}
+
+.progress-line::after {
+  white-space: pre;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  font-size: 0.625rem;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: 600;
+  content: attr(data-city-name);
+  opacity: 0.5;
+  transform: translateX(-50%);
+}
+
+.duration {
+  margin: auto;
+}

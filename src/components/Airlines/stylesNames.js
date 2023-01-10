@@ -1,0 +1,15 @@
+export const stylesNames = {
+  root: "root",
+  input: "input",
+  rootTitle: "root__title",
+  radiosBlock: "radios-block",
+  radiosBlockName: "radios-block__name",
+  radiosBlockIata: "radios-block__iata",
+  radiosBlockField: "radios-block__field",
+  radiosBlockRadioIata: "radios-block__radio-iata",
+  radiosBlockRadioName: "radios-block__radio-name",
+  rootMain: "root__main",
+  spinner: "spinner",
+  loaderContainer: "loader-container",
+  form: "form",
+};
