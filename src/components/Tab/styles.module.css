@@ -1,0 +1,15 @@
+.tab {
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: var(--tab-background-color);
+  cursor: pointer;
+  color: var(--button-font-color);
+  border: none;
+  box-shadow: 0 0 6px 0 var(--card-shadow-color);
+}
+
+.tab:hover {
+  background-color: var(--tab-background-color-hover);
+}

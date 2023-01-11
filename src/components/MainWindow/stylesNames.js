@@ -3,4 +3,5 @@ export const stylesNames = {
   container: "container",
   button: "button",
   root: "root",
+  mainWindow: "main-window",
 };

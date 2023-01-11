@@ -8,6 +8,7 @@
   z-index: 10;
   position: relative;
   cursor: pointer;
+  color: var(--dropdown-font-color);
 }
 
 .dropdown__block:active {

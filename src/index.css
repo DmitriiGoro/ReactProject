@@ -22,12 +22,39 @@ code {
   --tooltip-font-color: whitesmoke;
   --dropdown-content-color: white;
   --dropdown-block-active-color: rgba(232, 127, 41, 0.7);
-  --button-font-color: #eee;
+  --dropdown-font-color: #000;
+  --button-font-color: rgb(238, 229, 229);
   --button-background-color: #ff6f32;
   --airline-input-border-color: #ff6f32;
   --flight-input-border-color: #0c73fe;
   --flight-button-background-color: #0c73fe;
   --flight-input-border-focus-color: #ff6f32;
+  --tab-background-color-hover: rgba(218, 121, 2, 1);
+  --tab-background-color: rgba(218, 121, 2, 0.8);
+  --grey-2: #dde2e5;
+  --grey-3: #acb5bd;
+  --header-color: #fff;
+  --toggler-border: #dde2e5;
+  --toggler-on-border: #4263eb;
+  --tooltip-background-color: #646378;
+  --progressline-background-color: rgba(128, 128, 128, 0.5);
+  --progressline-font-color: rgb(41, 41, 226);
+  --header-background-color: rgb(75, 71, 71);
+  --header-link-color: rgb(139, 136, 136);
+  --header-active-link-color: whitesmoke;
+  --title-font-color: #000000;
+}
+
+div[data-theme="dark"] {
+  --page-background-color: #444950;
+  --card-background-color: #ccd0d5;
+  --card-shadow-color: #f5f6f7;
+  --dropdown-content-color: #444950;
+  --dropdown-font-color: #fff;
+  --progressline-font-color: rgb(0, 0, 161);
+  --tab-background-color-hover: rgb(255, 140, 0);
+  --tab-background-color: rgba(255, 140, 0, 0.8);
+  --title-font-color: #f5f5f5;
 }
 
 * {

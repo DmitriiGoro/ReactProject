@@ -9,7 +9,7 @@ import OutsideClickHandler from "react-outside-click-handler";
 import { stylesNames } from "./stylesNames";
 import classnames from "classnames";
 
-export const InputDate = ({ name }) => {
+export const InputDate = ({ name, className }) => {
   const [visibility, setVisibility] = useState(false);
   const chosenDate = useSelector((state) => selectFlightsInputDate(state));
   const ref = useRef();
@@ -18,7 +18,7 @@ export const InputDate = ({ name }) => {
     <OutsideClickHandler onOutsideClick={() => setVisibility(false)}>
       <div
         onFocus={() => setVisibility(true)}
-        className={classnames(styles[stylesNames.root])}
+        className={classnames(styles[stylesNames.root], className)}
       >
         <input
           value={chosenDate}

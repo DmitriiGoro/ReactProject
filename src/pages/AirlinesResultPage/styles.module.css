@@ -14,6 +14,11 @@
   margin: 0 auto;
 }
 
+.title {
+  color: var(--title-font-color);
+  text-align: center;
+}
+
 .button__wrapper {
   display: flex;
   flex-direction: column;

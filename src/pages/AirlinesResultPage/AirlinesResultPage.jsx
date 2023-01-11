@@ -8,12 +8,11 @@ import {
 import { useParams } from "react-router-dom";
 import { fetchAirline } from "../../store/airlines/airlines";
 import { useLayoutEffect } from "react";
-import { makeRequestString } from "../../store/utils/makeRequestString";
-import { AirlineCard } from "../AirlineCard/AirlineCard";
+import { AirlineCard } from "../../components/AirlineCard/AirlineCard";
 import styles from "./styles.module.css";
 import { stylesNames } from "./stylesNames";
-import { Button } from "../Button/Button";
-import { useState, useRef } from "react";
+import { Button } from "../../components/Button/Button";
+import { useRef } from "react";
 import { LoadingStatuses } from "../../constants/loadingStatuses";
 
 export const AirlinesResultPage = () => {
@@ -30,7 +29,6 @@ export const AirlinesResultPage = () => {
   }, [airlineInput]);
 
   const status = useSelector((state) => selectAirlinesLoadingStatus(state));
-  console.log(status);
 
   if (!airlineIds.length && status === LoadingStatuses.success) {
     return (
@@ -45,7 +43,7 @@ export const AirlinesResultPage = () => {
 
   return (
     <>
-      <h2>Results</h2>
+      <h2 className={styles[stylesNames.title]}>Results</h2>
 
       <ul className={styles[stylesNames.root]}>
         {airlineIds?.length > 0 &&

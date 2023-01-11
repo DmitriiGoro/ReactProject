@@ -22,8 +22,6 @@ export const Input = ({ name, required }) => {
     selector(state, { inputValue: debouncedValue })
   );
 
-  console.log("render");
-
   return (
     <div className={classnames(styles[stylesNames.root])}>
       <input

@@ -1,26 +1,20 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "../ThemeContext/ThemeContext";
+import React, { useContext, useRef } from "react";
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
-import { MainWindow } from "../MainWindow/MainWindow";
 import styles from "./styles.module.css";
 import { stylesNames } from "./stylesNames";
+import { ChangeThemeBlock } from "../ChangeThemeBlock/ChangeThemeBlock";
 
 export const Layout = ({ children }) => {
-  const { theme, setTheme } = useContext(ThemeContext);
+  const ref = useRef();
 
   return (
-    <div className={styles[stylesNames.page]}>
+    <div ref={ref} className={styles[stylesNames.page]}>
       <Header className={styles[stylesNames.container]}>
         {" "}
-        <button
-          className={styles[stylesNames.button]}
-          onClick={() => setTheme(theme === "default" ? "dark" : "default")}
-        >
-          Change theme
-        </button>
+        <ChangeThemeBlock forwardedRef={ref}></ChangeThemeBlock>
       </Header>
-      <div>
+      <div className={styles[stylesNames.main]}>
         <div className={styles[stylesNames.container]}>{children}</div>
       </div>
       <Footer></Footer>

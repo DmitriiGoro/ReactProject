@@ -13,13 +13,6 @@
   border-color: var(--flight-input-border-focus-color);
 }
 
-.root button {
-  height: auto;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  background-color: var(--flight-button-background-color);
-}
-
 .flight-block {
   margin: 20px;
   text-align: center;
@@ -29,6 +22,7 @@
   margin: 0;
   margin-right: 20px;
   align-self: center;
+  color: var(--title-font-color);
 }
 
 .wrapper {
@@ -37,10 +31,34 @@
   position: relative;
 }
 
-* {
-  box-sizing: border-box;
+@media screen and (max-width: 700px) {
+  .root {
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    justify-content: center;
+    margin: 20px auto;
+  }
+
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .root button {
+    background-color: var(--flight-button-background-color);
+    width: 100%;
+  }
+
+  .calendar img {
+    display: none;
+  }
 }
 
-.input_error {
-  border: 1.5px #f03d3e solid;
+@media screen and (min-width: 700px) {
+  .root button {
+    height: auto;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    background-color: var(--flight-button-background-color);
+  }
 }

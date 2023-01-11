@@ -5,4 +5,5 @@ export const stylesNames = {
   spinner: "spinner",
   loadingBlock: "loading-block",
   rootEmpty: "root_empty",
+  title: "title",
 };

@@ -1,5 +1,4 @@
 import {
-  selectFlightsCartModule,
   selectFlightsCartModuleEntities,
   selectFlightsCartModuleIds,
 } from "../../store/flightsCart/selectors";
@@ -8,19 +7,14 @@ import { FlightCardWithTransfer } from "../../components/FlightCardWithTransfer/
 import { FlightCard } from "../../components/FlightCard/FlightCard";
 import styles from "./styles.module.css";
 import { stylesNames } from "./stylesNames";
-import { flightsCartSlice } from "../../store/flightsCart";
 
 export const CartPage = () => {
-  const { removeFlight } = flightsCartSlice.actions;
-  const cart = useSelector((state) => selectFlightsCartModule(state));
   const cartFlightsIds = useSelector((state) =>
     selectFlightsCartModuleIds(state)
   );
   const cartFlightsEntities = useSelector((state) =>
     selectFlightsCartModuleEntities(state)
   );
-
-  console.log(cart);
 
   return (
     <ul className={styles[stylesNames.list]}>

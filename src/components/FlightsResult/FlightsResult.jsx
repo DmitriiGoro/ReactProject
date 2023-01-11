@@ -11,7 +11,6 @@ export const FlightsResult = ({ requestString }) => {
   const flight = useSelector((state) =>
     selectFlightByString(state, { requestString })
   );
-  console.log("flightResult");
 
   if (!flight) {
     return null;

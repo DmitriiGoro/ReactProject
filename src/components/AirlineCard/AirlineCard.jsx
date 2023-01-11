@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./styles.module.css";
 import { useSelector } from "react-redux";
 import { selectAirlinesEntityById } from "../../store/airlines/selectors";
-import { selectCityNameByIataCode } from "../../store/iataCodes/selectors";
 import { stylesNames } from "./stylesNames";
 
 export const AirlineCard = ({ airlineId }) => {
@@ -23,10 +22,6 @@ export const AirlineCard = ({ airlineId }) => {
     icao_code,
     hub_code,
   } = airline;
-
-  // const cityHub = useSelector((state) =>
-  //   selectCityNameByIataCode(state, { iataCode: hub_code })
-  // );
 
   return (
     <div className={styles[stylesNames.root]}>

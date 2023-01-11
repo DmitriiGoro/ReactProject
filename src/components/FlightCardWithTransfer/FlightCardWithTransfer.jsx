@@ -13,16 +13,12 @@ import { copyToClipboard } from "../../constants/copyToClipboard";
 import { stylesNames } from "./stylesNames";
 import { FlightProgressLine } from "../FlightProgressLine/FlightProgressLine";
 import { useSelector } from "react-redux";
-import {
-  selectFlightFromCartByString,
-  selectFlightsCartModuleEntities,
-} from "../../store/flightsCart/selectors";
+import { selectFlightFromCartByString } from "../../store/flightsCart/selectors";
 import { useStore } from "react-redux";
 
 export const FlightCardWithTransfer = ({ flight, removable = false }) => {
   const { addFlight, removeFlight } = flightsCartSlice.actions;
   const dispatch = useDispatch();
-  const store = useStore();
 
   const {
     time,

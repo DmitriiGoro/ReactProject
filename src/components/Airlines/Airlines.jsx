@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useDispatch, useStore, useSelector } from "react-redux";
 import { Form, Field } from "react-final-form";
 import styles from "./styles.module.css";
@@ -12,10 +12,8 @@ import { selectAirlinesLoadingStatus } from "../../store/airlines/selectors";
 import { LoadingStatuses } from "../../constants/loadingStatuses";
 
 export const Airlines = () => {
-  const store = useStore();
   const navigate = useNavigate();
   const ref = useRef();
-  const dispatch = useDispatch();
   const status = useSelector((state) => selectAirlinesLoadingStatus(state));
 
   return (

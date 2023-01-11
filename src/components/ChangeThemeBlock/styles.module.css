@@ -1,0 +1,88 @@
+.toggler {
+  position: relative;
+  display: inline-block;
+}
+
+.toggler__state {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  height: auto;
+}
+
+.toggler__input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+.toggler__control {
+  background: transparent;
+  border: 1px solid var(--toggler-border);
+  box-sizing: border-box;
+  border-radius: 16px;
+  width: 46px;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  transition: background 300ms linear;
+}
+
+.toggler__icon {
+  margin: 2px;
+  fill: var(--grey-2);
+  position: relative;
+  transition: transform 300ms linear, fill 500ms linear;
+}
+
+.toggler__icon_sun,
+.toggler__icon_moon {
+  fill: var(--grey-2);
+}
+
+.toggler__title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-primary);
+}
+
+.toggler__title-on {
+  display: none;
+}
+
+.toggler__input:checked ~ .toggler__state .toggler__control {
+  background: var(--toggler-on-border);
+  border-color: var(--toggler-on-border);
+}
+
+.toggler__input:checked ~ .toggler__state .toggler__icon {
+  fill: var(--header-color);
+  transform: translateX(22px);
+}
+
+.toggler__input:checked ~ .toggler__state .toggler__icon_sun,
+.toggler__input:checked ~ .toggler__state .toggler__icon_moon {
+  fill: var(--header-color);
+}
+
+.toggler__input:checked ~ .toggler__state .toggler__title {
+  display: none;
+}
+
+.toggler__input:checked ~ .toggler__state .toggler__title-on {
+  display: block;
+}
+
+.toggler__input:disabled ~ .toggler__state .toggler__control {
+  background: var(--grey-2);
+}
+
+.toggler__input:disabled ~ .toggler__state .toggler__icon {
+  fill: var(--grey-3);
+}
+
+.toggler__input:focus ~ .toggler__state .toggler__title {
+  text-decoration: underline;
+}

@@ -9,6 +9,8 @@ import { flightsInputNames } from "../../constants/flightsInputNames";
 import { FlightCardSkeleton } from "../../components/FlightCardSkeleton/FlightCardSkeleton";
 import { selectFlightsError } from "../../store/flights/selectors";
 import { ErrorInform } from "../../components/ErrorInform/ErrorInform";
+import { stylesNames } from "./stylesNames";
+import styles from "./styles.module.css";
 
 export const FlightsResultPage = () => {
   const { requestString } = useParams();
@@ -28,7 +30,7 @@ export const FlightsResultPage = () => {
   if (status === LoadingStatuses.inProgress) {
     return (
       <div>
-        <h2>Results</h2>
+        <h2 className={styles[stylesNames.title]}>Results</h2>
         <FlightCardSkeleton />
       </div>
     );
@@ -39,7 +41,7 @@ export const FlightsResultPage = () => {
 
   return (
     <div>
-      <h2>Results</h2>
+      <h2 className={styles[stylesNames.title]}>Results</h2>
       <FlightsResult requestString={requestString}></FlightsResult>
     </div>
   );

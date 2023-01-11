@@ -8,9 +8,6 @@ import { InputDate } from "../InputDate/InputDate";
 import { Outlet, useNavigate } from "react-router-dom";
 import { makeRequestString } from "../../store/utils/makeRequestString";
 import { stylesNames } from "./stylesNames";
-import { fetchIataCodes } from "../../store/iataCodes";
-import { useLayoutEffect } from "react";
-import { useState } from "react";
 import { Button } from "../Button/Button";
 
 const CalendarWithMemo = React.memo(InputDate);
@@ -40,7 +37,11 @@ export const Flights = () => {
           {flightsInputNamesArray.length > 0 &&
             flightsInputNamesArray.map((name) =>
               name === "date" ? (
-                <CalendarWithMemo key={name} name={name} />
+                <CalendarWithMemo
+                  className={styles[stylesNames.calendar]}
+                  key={name}
+                  name={name}
+                />
               ) : (
                 <Input required key={name} name={name} />
               )

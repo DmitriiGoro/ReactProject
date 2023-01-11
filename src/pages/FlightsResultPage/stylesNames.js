@@ -1,3 +1,3 @@
 export const stylesNames = {
-  tab: "tab",
+  title: "title",
 };

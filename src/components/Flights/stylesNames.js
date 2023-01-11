@@ -3,4 +3,5 @@ export const stylesNames = {
   title: "title",
   wrapper: "wrapper",
   flightBlock: "flight-block",
+  calendar: "calendar",
 };

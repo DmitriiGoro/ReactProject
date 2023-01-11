@@ -14,22 +14,28 @@ export const Header = ({ children, className }) => {
             <NavLink
               className={({ isActive }) =>
                 isActive
-                  ? styles[stylesNames.headerActiveLink]
-                  : styles[stylesNames.headerLink]
-              }
-              to="cart"
-            >
-              Hazari
-            </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? styles[stylesNames.headerActiveLink]
+                  ? classnames(
+                      styles[stylesNames.headerActiveLink],
+                      styles[stylesNames.headerLink]
+                    )
                   : styles[stylesNames.headerLink]
               }
               to="/"
             >
               Main
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? classnames(
+                      styles[stylesNames.headerActiveLink],
+                      styles[stylesNames.headerLink]
+                    )
+                  : styles[stylesNames.headerLink]
+              }
+              to="cart"
+            >
+              Chozen flights
             </NavLink>
           </div>
           {children}

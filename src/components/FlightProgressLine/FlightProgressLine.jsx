@@ -8,7 +8,6 @@ export const FlightProgressLine = ({ flights, timeTotal }) => {
   const [start] = flights;
   const end = flights.at(-1);
   const navigate = useNavigate();
-  console.log(flights);
 
   return (
     <div className={styles[stylesNames.root]}>

@@ -27,10 +27,10 @@
 .progress-line {
   box-sizing: content-box;
   background-clip: content-box;
-  background-color: rgba(128, 128, 128, 0.5);
+  background-color: var(--progressline-background-color);
   height: 5px;
   position: relative;
-  color: blue;
+  color: var(--progressline-font-color);
   flex-basis: 11px;
   border-radius: 2.5px;
   cursor: pointer;
@@ -49,7 +49,7 @@
   font-size: 0.625rem;
   bottom: 100%;
   margin-bottom: 5px;
-  background-color: var(--card-shadow-color);
+  background-color: var(--tooltip-background-color);
   border-radius: 5px;
   display: flex;
   flex-direction: column;

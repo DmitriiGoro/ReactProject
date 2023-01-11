@@ -20,6 +20,7 @@
 .radios-block {
   display: flex;
   align-items: center;
+  color: var(--title-font-color);
 }
 
 .radios-block__field {
@@ -53,6 +54,7 @@
 
 .root__title {
   margin: 0;
+  color: var(--title-font-color);
 }
 
 .input {
@@ -78,6 +80,10 @@
   border-color: #ffffff transparent #ffffff transparent;
   border-radius: 50%;
   animation: spin-anim 1.2s linear infinite;
+}
+
+h3 {
+  color: var(--title-font-color);
 }
 
 @keyframes spin-anim {
