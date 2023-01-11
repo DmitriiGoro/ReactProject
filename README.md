@@ -2,9 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-To launch this project you must:
+## To launch this project you must:
 
 - Get api key from 'https://yandex.ru/dev/rasp/raspapi/'
 - Make API_KEY_YNDX.js file in <b>src</b> directory and make constant API_KEY with api key value you get from step 1
