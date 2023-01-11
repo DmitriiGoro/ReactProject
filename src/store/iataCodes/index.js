@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { selectIataCodesIds } from "./selectors";
 import { LoadingStatuses } from "../../constants/loadingStatuses";
+import { IATA_CODES_URL } from "../../urls/urls";
 
 export const fetchIataCodes = createAsyncThunk(
   "iataCodes/fetchIataCodes",
@@ -11,7 +12,9 @@ export const fetchIataCodes = createAsyncThunk(
       return thunkApi.rejectWithValue(LoadingStatuses.earlyAdded);
     }
 
-    const responce = await fetch("http://localhost:3001/api/iataCodes/");
+    const url = IATA_CODES_URL;
+
+    const responce = await fetch(url);
 
     return await responce.json();
   }

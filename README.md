@@ -4,6 +4,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+To launch this project you must:
+
+- 1. get api key from 'https://yandex.ru/dev/rasp/raspapi/'
+- 2. make API_KEY_YNDX.js file in <b>src</b> directory and make constant API_KEY with api key value you get from step 1
+- 3. install <b>Allow CORS: Access-Control-Allow-Origin</b> extension for Google Chrome
+
+## Available Scripts
+
 In the project directory, you can run:
 
 ### `npm start`

@@ -13,7 +13,7 @@ import {
 export const fetchAirline = createAsyncThunk(
   "airlines/fetchAirline",
   async ({ airlineInput, step }, thunkApi) => {
-    const url = new URL(AIRLINES_URL);
+    const url = AIRLINES_URL;
 
     const searchParams = new URLSearchParams(airlineInput);
     // think about this method (how to check previous data)

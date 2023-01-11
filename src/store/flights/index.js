@@ -16,7 +16,7 @@ export const fetchFlight = createAsyncThunk(
       return thunkApi.rejectWithValue(LoadingStatuses.earlyAdded);
     }
 
-    const url = new URL(YNDX_API_URL);
+    const url = YNDX_API_URL;
     url.searchParams.set("from", from.toLowerCase());
     url.searchParams.set("to", to.toLowerCase());
     url.searchParams.set("date", date);
