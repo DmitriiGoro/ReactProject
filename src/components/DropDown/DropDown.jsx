@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { useDebounce } from "use-debounce";
 
-export const DropDown = ({ name, onChange, className, value, onClick }) => {
+export const DropDown = ({ name, onChange, className, onClick }) => {
   const [inputValue] = useDebounce(
     useSelector((state) =>
       selectFlightsInputByName(state, { inputName: name })

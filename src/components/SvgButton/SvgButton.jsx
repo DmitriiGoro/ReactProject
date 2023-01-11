@@ -13,7 +13,7 @@ export const SvgButton = ({
     <button
       disabled={disabled}
       className={classnames(styles[stylesNames.button], className)}
-      onClick={onClick}
+      onClick={onClick ? onClick : ""}
     >
       {tooltipText ? (
         <span className={styles[stylesNames.tooltip]}>{tooltipText}</span>

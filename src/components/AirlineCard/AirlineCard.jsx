@@ -9,6 +9,10 @@ export const AirlineCard = ({ airlineId }) => {
     selectAirlinesEntityById(state, { airlineId })
   );
 
+  if (!airline) {
+    return null;
+  }
+
   const {
     callsign,
     country_name,

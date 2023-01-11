@@ -11,9 +11,9 @@ export const ChangeThemeBlock = ({ forwardedRef }) => {
   return (
     <label
       onClick={() =>
-        checkBoxRef.current.checked
-          ? forwardedRef.current.setAttribute("data-theme", "dark")
-          : forwardedRef.current.removeAttribute("data-theme")
+        checkBoxRef?.current.checked
+          ? forwardedRef?.current.setAttribute("data-theme", "dark")
+          : forwardedRef?.current.removeAttribute("data-theme")
       }
       className={styles[stylesNames.toggler]}
     >

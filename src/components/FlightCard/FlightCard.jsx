@@ -40,6 +40,10 @@ export const FlightCard = ({ flight, removable = false }) => {
     selectFlightFromCartByString(state, { flightString: flightNumber })
   );
 
+  if (!flight) {
+    return null;
+  }
+
   return (
     <div className={styles.root}>
       <div className={styles[stylesNames.cardTop]}>

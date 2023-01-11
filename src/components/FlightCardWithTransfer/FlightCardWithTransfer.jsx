@@ -42,6 +42,10 @@ export const FlightCardWithTransfer = ({ flight, removable = false }) => {
     selectFlightFromCartByString(state, { flightString })
   );
 
+  if (!flight) {
+    return null;
+  }
+
   return (
     <div className={styles.root}>
       <div className={styles[stylesNames.cardTop]}>

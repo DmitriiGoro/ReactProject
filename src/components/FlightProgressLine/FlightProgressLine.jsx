@@ -9,6 +9,10 @@ export const FlightProgressLine = ({ flights, timeTotal }) => {
   const end = flights.at(-1);
   const navigate = useNavigate();
 
+  if (!flights.length) {
+    return null;
+  }
+
   return (
     <div className={styles[stylesNames.root]}>
       <span className={styles[stylesNames.rootDeparture]}>
